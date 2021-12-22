@@ -1,17 +1,22 @@
 .App {
     min-height: 100vh;
-    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-}
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#00C781 2px, transparent 2px), radial-gradient(#00C781 2px, #e5e5f7 2px);
+    background-size: 80px 80px;
+    background-position: 0 0,40px 40px;
+    }
 
 .search-form {
     min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(0, 199, 129); 
 }
 
 .search-bar {
-    width: 50%;
+    width: 70%;
     border: none;
     padding: 10px;
 }
@@ -19,7 +24,8 @@
 .search-button {
     border: none;
     background-color: transparent;
-    padding: 10px 10px;
+    padding: 5px 5px;
+    cursor: pointer; 
 }
 
 .search-button:hover {
@@ -30,9 +36,9 @@
     transform: translateY(5px);
 }
 
-.recipes {
+/* .recipes {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+} */
 
