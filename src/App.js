@@ -43,7 +43,7 @@ function App() {
       >
       <Heading color="white" margin={{left:"20px"}}>BeneReperit</Heading>
       <form className="search-form" onSubmit={getSearch}>
-        <input type="text" className="search-bar" value={search} onChange={updateSearch} placeholder="Type a grocery" />
+        <input type="text" className="search-bar" value={search} onChange={updateSearch} placeholder="Search a Recipe" />
         <button type="submit" className="search-button"><FormSearch size="40px"/></button>
       </form>
       </Header>
@@ -58,7 +58,7 @@ function App() {
         image={recipe.recipe.image}
         dishtype={recipe.recipe.dishType}
         countrytype={recipe.recipe.cuisineType}
-        //url={recipe.recipe.url}
+        url={recipe.recipe.url}
         />
       ))}
       </Box>
