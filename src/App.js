@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import './App.css';
 import { FormSearch } from 'grommet-icons';
-import { Header, Heading, Box } from 'grommet'; 
+import { Header, Heading, Box, Footer, Text, Button } from 'grommet'; 
+import {
+	Github, Instagram,
+} from 'grommet-icons';
 
 
 function App() {
@@ -16,6 +19,7 @@ function App() {
   
   useEffect( () => {
     getRecipes();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   const getRecipes = async () => {
@@ -47,7 +51,7 @@ function App() {
         <button type="submit" className="search-button"><FormSearch size="40px"/></button>
       </form>
       </Header>
-      <Box direction="column" width="medium" justify='around' height="auto" margin={{right:"auto", left:"auto"}} >
+      <Box direction="row" wrap="true" width="100%" justify='center' gap="10px" >
       {recipes.map(recipe => (
         <Recipe
         key={recipe.recipe.label} 
@@ -62,6 +66,13 @@ function App() {
         />
       ))}
       </Box>
+      <Footer height="5rem" background="dark-2" justify="around">
+        <Text>&copy; Ridvan</Text>
+        <Box direction='row' gap="1rem">
+        <Button><Github size="20%" color="light-6" href="https://github.com/RidvanR" /></Button>
+				<Button><Instagram size="20%" color="light-6" href="https://www.instagram.com/ridvan.rul/" /></Button>
+        </Box>
+      </Footer>
     </div>
   );
 }

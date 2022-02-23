@@ -14,7 +14,7 @@ function Recipe({title, calories, image, dishtype, countrytype, time, url})  {
                src={image}
             />
            </CardHeader>
-           <CardBody justify='around' background="neutral-4" direction="row" align='center'>
+           <CardBody justify='around' background="neutral-4" direction="column" wrap="true">
            <Anchor href={url} label={title} color="accent-4" />
            <Paragraph size="small">{time} Min</Paragraph>
            </CardBody>
